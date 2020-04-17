@@ -1,0 +1,23 @@
+### Задание
+
+1) Почитать больше про CI/CD
+
+2) Запустить приложение в Docker-compose
+
+3) Настроить ему CI/CD с тестами и ревью
+
+4) Создать свой базовый образ*
+
+### Полезные ссылки
+
+https://clck.ru/MBtKt -про CI/CD в целом
+
+https://docs.docker.com/compose/
+
+https://docs.docker.com/compose/gettingstarted/
+
+https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+
+https://docs.docker.com/develop/develop-images/baseimages/
+
+https://habr.com/ru/company/southbridge/blog/329138/

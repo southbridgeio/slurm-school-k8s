@@ -1,0 +1,17 @@
+### Задание
+
+1) Посмотреть тома Docker(dockervolume)
+
+2) Познакомится ближе с механизмами контейнеризации (unshare, netns, systemd-cgls)
+
+3) Как ограничить ресурсы контейнеру (cpu/ram)?
+
+### Полезные ссылки
+
+https://docs.docker.com/storage/volumes/
+
+https://fabiokung.com/2014/03/13/memory-inside-linux-containers/
+
+https://docs.docker.com/config/containers/resource_constraints/
+
+https://habr.com/ru/company/selectel/blog/279281/
