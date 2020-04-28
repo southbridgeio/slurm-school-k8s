@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fileshare
+spec:
+  rules:
+  - host: fs.s<номер своего логина>.k8s.slurm.io
+    http:
+      paths:
+      - backend:
+          serviceName: fileshare
+          servicePort: 80
