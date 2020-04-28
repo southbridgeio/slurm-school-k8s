@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - host: s<номер своего логина>.k8s.slurm.io
+    http:
+      paths:
+      - backend:
+          serviceName: my-service
+          servicePort: 80
