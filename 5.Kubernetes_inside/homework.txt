@@ -1,0 +1,17 @@
+﻿1) Почитать про IPVS
+
+2) Почитать про Calico
+
+3) Почитать про общее устройство кластера и компоненты
+
+Полезные ссылки:
+
+https://habr.com/en/company/southbridge/blog/334846/
+
+https://itnan.ru/post.php?c=1&p=346314
+
+https://medium.com/@benmeier_/a-quick-minimal-ipvs-load-balancer-demo-d5cc42d0deb4
+
+https://kubernetes.io/blog/2018/07/09/ipvs-based-in-cluster-load-balancing-deep-dive/
+
+https://docs.projectcalico.org/getting-started/kubernetes/
