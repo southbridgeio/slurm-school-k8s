@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: node-name
+  name: node-name
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: node-name
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: node-name
+    spec:
+      containers:
+      - image: k8s.gcr.io/busybox
+        name: node-name
+        command: [ "sh", "-c"]
+        args:
+        - while true; do
+            echo -en '\n';
+            printenv MY_NODE_NAME MY_POD_NAME ;
+            sleep 10;
+          done;
+        env:
+        - name: MY_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name

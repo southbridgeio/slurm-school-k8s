@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: base
+spec:
+  serviceName: base
+  replicas: 1
+  selector:
+    matchLabels:
+      app: base
+  template:
+    metadata:
+      labels:
+        app: base
+    spec:
+      containers:
+      - image: k8s.gcr.io/busybox
+        name: node-name
+        command: [ "sh", "-c"]
+        args:
+        - while true; do
+            echo -en '\n';
+            date;
+            ls /data;
+            sleep 10;
+          done;
+        volumeMounts:
+          - name: data
+            mountPath: /data
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: local-storage
