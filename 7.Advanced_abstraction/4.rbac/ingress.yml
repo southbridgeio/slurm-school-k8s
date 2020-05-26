@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: api
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  rules:
+  - host: api.s<номер студента>.edu.slurm.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kubernetes
+          servicePort: 443
+  tls:
+  - hosts:
+    - api.s<номер студента>.edu.slurm.io
+    secretName: certificate

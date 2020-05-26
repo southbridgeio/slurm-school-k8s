@@ -1,0 +1,24 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: rnd-sleep
+spec:
+  concurrencyPolicy: Forbid
+  schedule: "*/1 * * * *"
+  successfulJobsHistoryLimit: 4
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      activeDeadlineSeconds: 140
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: k8s.gcr.io/busybox
+            args:
+            - /bin/sh
+            - -c
+            - 'set -x; D=$(head -30 /dev/urandom | tr -dc "0123456789" | head -c2);
+              date; echo "Sleep $D seconds"; sleep $D; echo "Sleep done"; E=$(/bin/busybox dc $D 4 mod p); exit $E'
+          restartPolicy: Never
