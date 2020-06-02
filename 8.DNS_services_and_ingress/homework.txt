@@ -1,0 +1,3 @@
+﻿1) Почитать документацию приглянувшегося Ingress-Controller'а
+
+Например: https://kubernetes.github.io/ingress-nginx/
