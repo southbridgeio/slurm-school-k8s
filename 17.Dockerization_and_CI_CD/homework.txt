@@ -1,0 +1,8 @@
+В качестве домашнего задания:
+Можете попробовать другие варианты CI/CD в Gitlab и сравнить с тем, что видели у нас. Вот пример, одобренный разработчиками Gitlab
+https://about.gitlab.com/blog/2017/09/21/how-to-create-ci-cd-pipeline-with-autodeploy-to-kubernetes-using-gitlab-and-helm/
+Или вот, от популярного портала Bitnami:
+https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-gitlab-kubernetes/
+На русском языке можете почитать и попробовать тут:
+https://cloud.yandex.ru/docs/solutions/infrastructure-management/gitlab-containers
+
